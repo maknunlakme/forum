@@ -8,7 +8,7 @@ class Comment extends Model
 {
     public  function post()
     {
-    	return $this->belongsTO(Post::class);
+    	return $this->belongsTo(Post::class);
     }
 
     public function user()

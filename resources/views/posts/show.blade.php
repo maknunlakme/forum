@@ -5,6 +5,10 @@
 	<div class="col-md-8 blog-main">
 		<h1>{{ $post->title }}</h1>
 
+		<p class="blog-post-meta">
+  			{{ $post->user->name }} on
+    		{{ $post->created_at->toFormattedDateString() }}
+  		</p>
 		{{ $post->body }}
 
 		<hr>
@@ -15,6 +19,7 @@
 	    		@foreach ( $post->comments as $comment)
 	    			<li class="list-group-item">
 	    				<strong>
+	    					{{ $comment->user->name  }} on
 	    					{{ $comment->created_at->diffForHumans() }}: &nbsp;
 	    				</strong>
 	    				{{ $comment->body }}
