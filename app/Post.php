@@ -19,4 +19,13 @@ class Post extends Model
 		$user_id = auth()->id();
 		$this->comments()->create(compact('body', 'user_id'));
 	}
+
+	public static function archives()
+	{
+		return static::selectRaw('year(created_at) year, monthname(created_at) month, count(*) published')
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
+            ->get()
+            ->toArray();
+	}
 }
