@@ -5,11 +5,26 @@
   </div>
 
   <div class="p-3">
-    <h4 class="font-italic">Archives</h4>
+    <h4 class="font-italic">Post Archives</h4>
     <ol class="list-unstyled mb-0">
       @foreach ($archives as $stats)
         <li>
-          <a href="/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">{{ $stats['month'].' '.$stats['year'] }}</a>
+          <a href="/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
+            {{ $stats['month'].' '.$stats['year'] }}
+          </a>
+        </li>
+      @endforeach
+    </ol>
+  </div>
+
+  <div class="p-3">
+    <h4 class="font-italic">Problem Tags</h4>
+    <ol class="list-unstyled mb-0">
+      @foreach ($tags as $tag)
+        <li>
+          <a href="/problems/tags/{{ $tag }}">
+            {{ $tag }}
+          </a>
         </li>
       @endforeach
     </ol>

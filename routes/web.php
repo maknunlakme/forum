@@ -14,6 +14,8 @@ Route::post('/posts/{post}/comments','CommentsController@store');
 
 Route::get('/problems','ProblemsController@index');
 
+Route::get('/problems/tags/{tag}','TagsController@index');
+
 
 Route::get('/register','RegistrationController@create');
 

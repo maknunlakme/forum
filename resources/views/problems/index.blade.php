@@ -10,15 +10,15 @@
 				<th> Online Judge </th>
 				<th> Problem Level </th>
 			</tr>
-			<tr>
-				@foreach ($problems as $problem)
+			@foreach ($problems as $problem)
+				<tr>
 					<td> <a href="{{ $problem->link }}">
 						{{ $problem->name }}</a> 
 					</td>
 					<td> {{ $problem->oj_name }} </td>
 					<td> {{ $problem->level }} </td>
-				@endforeach
-			<tr>
+				<tr>
+			@endforeach
 		</table>
 	</div>
 @endsection
