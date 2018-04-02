@@ -26,6 +26,9 @@
 
     @include('layouts.headpost')
 
+    <br>
+    <br>
+
     <main role="main" class="container">
     	<div class="row">
 

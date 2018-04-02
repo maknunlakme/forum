@@ -2,11 +2,15 @@
 
 Route::get('/','PostsController@index')->name('home');
 
+Route::get('/home','PostsController@index');
+
 Route::get('/posts/create','PostsController@create');
 
 Route::post('/posts','PostsController@store');
 
 Route::get('/posts/{post}','PostsController@show');
+
+Route::get('/about','PostsController@about');
 
 
 Route::post('/posts/{post}/comments','CommentsController@store');

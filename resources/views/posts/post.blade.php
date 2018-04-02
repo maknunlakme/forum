@@ -1,9 +1,9 @@
 <div class="blog-post">
-  <h2 class="blog-post-title">
+  <h3>
     <a href="/posts/{{ $post->id }}">
       {{ $post->title }}
     </a>
-  </h2>
+  </h3>
 
 
   <p class="blog-post-meta">
